@@ -334,6 +334,7 @@ nav .fa-solid{
 @media only screen and (max-width: 600px){
     #header{
         background-image: url(images/phoneprofilepic300x464.jpg);
+        background-attachment: scroll;
     }
     .header-text{
         margin-top: 95%;
