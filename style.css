@@ -1,8 +1,8 @@
 *{
-    margin:0;
+    margin:0; 
     padding:0;
+    font-family:'Poppins', sans-serif;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
 }
 
 html{
@@ -15,7 +15,7 @@ body{
     overflow-x:hidden;
 }
 
-/* ================= HEADER ================= */
+/* ---------------- HEADER / VIDEO HOME ---------------- */
 
 #header{
     width:100%;
@@ -24,15 +24,15 @@ body{
     top:0;
     overflow:hidden;
     z-index:1;
+    background:#000;
 }
-
-/* VIDEO BACKGROUND */
 
 .video-background{
     position:absolute;
     inset:0;
     width:100%;
-    height:100%;
+    height:100vh;
+    overflow:hidden;
     z-index:0;
 }
 
@@ -43,10 +43,13 @@ body{
     width:100%;
     height:100%;
     object-fit:cover;
+
     object-position:center 18%;
+
     opacity:0;
     transform:scale(1.12);
     filter:blur(8px) brightness(.55);
+
     transition:
         opacity 1.3s ease,
         transform 2.4s ease,
@@ -71,14 +74,23 @@ body{
     z-index:1;
 }
 
-/* CONTENT ABOVE VIDEO */
-
 #header .container{
     position:relative;
     z-index:5;
 }
 
-/* ================= GENERAL ================= */
+/* This makes the rest of the site slide over the homepage */
+
+#page-content{
+    position:relative;
+    z-index:5;
+    background:#000;
+    border-radius:45px 45px 0 0;
+    box-shadow:0 -25px 60px rgba(0,0,0,.85);
+    overflow:hidden;
+}
+
+/* ---------------- GENERAL ---------------- */
 
 .container{
     padding:10px 10%;
@@ -112,11 +124,11 @@ nav ul li a::after{
     content:'';
     width:0;
     height:3px;
-    background:blueviolet;
+    background-color:blueviolet;
     position:absolute;
     left:0;
     bottom:-6px;
-    transition:.4s;
+    transition:0.4s;
 }
 
 nav ul li a:hover::after{
@@ -138,17 +150,12 @@ nav ul li a:hover::after{
     color:blueviolet;
 }
 
-/* ================= ABOUT ================= */
+/* ---------------- ABOUT ---------------- */
 
 #about{
     padding:80px 0;
     color:#fff;
     background:#000;
-    position:relative;
-    z-index:5;
-    margin-top:0;
-    border-radius:45px 45px 0 0;
-    box-shadow:0 -25px 60px rgba(0,0,0,.8);
 }
 
 .row{
@@ -193,23 +200,15 @@ nav ul li a:hover::after{
     content:'';
     width:0;
     height:3px;
-    background:blueviolet;
+    background-color:blueviolet;
     position:absolute;
     left:0;
     bottom:-8px;
-    transition:.4s;
+    transition:0.4s;
 }
 
 .tab-links.active-link::after{
     width:50%;
-}
-
-.tab-contents{
-    display:none;
-}
-
-.tab-contents.active-tab{
-    display:block;
 }
 
 .tab-contents ul li{
@@ -222,15 +221,24 @@ nav ul li a:hover::after{
     font-size:14px;
 }
 
-/* ================= SERVICES ================= */
+.tab-contents{
+    display:none;
+}
+
+.tab-contents.active-tab{
+    display:block;
+}
+
+/* ---------------- SERVICES ---------------- */
 
 #services{
     padding:30px 0;
+    background:#000;
 }
 
 .services-list{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
     grid-gap:40px;
     margin-top:50px;
 }
@@ -241,7 +249,7 @@ nav ul li a:hover::after{
     font-size:13px;
     font-weight:300;
     border-radius:10px;
-    transition:.4s;
+    transition:background 0.4s, transform 0.4s;
 }
 
 .services-list div i{
@@ -264,19 +272,20 @@ nav ul li a:hover::after{
 }
 
 .services-list div:hover{
-    background:blueviolet;
+    background-color:blueviolet;
     transform:translateY(-10px);
 }
 
-/* ================= PORTFOLIO ================= */
+/* ---------------- PORTFOLIO ---------------- */
 
 #portfolio{
     padding:50px 0;
+    background:#000;
 }
 
 .work-list{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
     grid-gap:40px;
     margin-top:50px;
 }
@@ -289,16 +298,17 @@ nav ul li a:hover::after{
 
 .work img{
     width:100%;
-    height:220px;
-    object-fit:cover;
+    height:220px;              
+    object-fit:cover;          
+    border-radius:10px;
     display:block;
-    transition:.4s;
+    transition:transform 0.4s;
 }
 
 .layer{
     width:100%;
     height:0%;
-    background:linear-gradient(rgba(138,43,226,.4),#8A2BE2);
+    background:linear-gradient(rgba(138, 43, 226, 0.5), #8A2BE2);
     border-radius:10px;
     position:absolute;
     left:0;
@@ -310,7 +320,8 @@ nav ul li a:hover::after{
     flex-direction:column;
     padding:0 40px;
     text-align:center;
-    transition:.4s;
+    font-size:20px;
+    transition:height 0.4s;
 }
 
 .layer h3{
@@ -321,14 +332,14 @@ nav ul li a:hover::after{
 .layer a{
     margin-top:20px;
     color:blueviolet;
+    text-decoration:none;
+    font-size:18px;
+    line-height:60px;
     background:#fff;
     width:60px;
     height:60px;
-    line-height:60px;
     border-radius:50%;
     text-align:center;
-    font-size:18px;
-    text-decoration:none;
 }
 
 .work:hover img{
@@ -339,8 +350,6 @@ nav ul li a:hover::after{
     height:100%;
 }
 
-/* BUTTONS */
-
 .btn{
     display:block;
     margin:50px auto;
@@ -350,19 +359,18 @@ nav ul li a:hover::after{
     border-radius:6px;
     text-decoration:none;
     color:#fff;
-    transition:.4s;
+    transition:background 0.4s;
 }
 
 .btn:hover{
-    background:#8A2BE2;
+    background-color:#8A2BE2;
 }
 
-.btn.btn2{
-    display:inline-block;
-    background:#8A2BE2;
-}
+/* ---------------- CONTACT ---------------- */
 
-/* ================= CONTACT ================= */
+#contact{
+    background:#000;
+}
 
 .contact-left{
     flex-basis:35%;
@@ -392,19 +400,24 @@ nav ul li a:hover::after{
     margin-right:15px;
     color:#ababab;
     display:inline-block;
-    transition:.4s;
+    transition:transform 0.4s;
 }
 
 .social-icons a:hover{
-    color:blueviolet;
+    color:#8A2BE2;
     transform:translateY(-5px);
+}
+
+.btn.btn2{
+    display:inline-block;
+    background-color:blueviolet;
 }
 
 .contact-right form{
     width:100%;
 }
 
-form input,
+form input, 
 form textarea{
     width:100%;
     border:0;
@@ -433,28 +446,26 @@ form .btn2{
     margin-top:20px;
 }
 
-/* MESSAGE */
-
 #msg{
     color:#61b752;
     margin-top:10px;
     display:block;
 }
 
-/* ================= MOBILE ================= */
+/* ---------------- SMALL SCREENS ---------------- */
 
 nav .fa-solid{
     display:none;
 }
 
 @media only screen and (max-width:600px){
-
     #header{
         height:100vh;
+        position:relative;
     }
 
-    .logo{
-        width:150px;
+    .bg-video{
+        object-position:center center;
     }
 
     .header-text{
@@ -472,7 +483,7 @@ nav .fa-solid{
     }
 
     nav ul{
-        background:blueviolet;
+        background-color:blueviolet;
         position:fixed;
         top:0;
         right:-200px;
@@ -480,7 +491,7 @@ nav .fa-solid{
         height:100vh;
         padding-top:50px;
         z-index:10;
-        transition:.4s;
+        transition:0.4s;
     }
 
     nav ul li{
@@ -499,10 +510,8 @@ nav .fa-solid{
         font-size:40px;
     }
 
-    .about-col-1,
-    .about-col-2,
-    .contact-left,
-    .contact-right{
+    .about-col-1, 
+    .about-col-2{
         flex-basis:100%;
     }
 
@@ -510,13 +519,27 @@ nav .fa-solid{
         margin-bottom:30px;
     }
 
+    .about-col-2{
+        font-size:19px;
+    }
+
     .tab-links{
         margin-right:20px;
         font-size:16px;
     }
 
+    .contact-left, 
+    .contact-right{
+        flex-basis:100%;
+    }
+
     .copyright{
         font-size:14px;
+    }
+
+    .logo{
+        width:150px;
+        height:98px;
     }
 }
 
