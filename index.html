@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Braylon's Personal Portfolio</title>
-
-<link rel="stylesheet" href="style.css">
-<script src="https://kit.fontawesome.com/7d2ddb868d.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Braylon's Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7d2ddb868d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
-
 <div id="header" class="section active">
 
-    <!-- VIDEO BACKGROUND -->
     <div class="video-background">
-
         <video class="bg-video active" muted playsinline preload="auto">
             <source src="videos/life-1.mp4" type="video/mp4">
         </video>
@@ -33,11 +27,9 @@
         </video>
 
         <div class="video-overlay"></div>
-
     </div>
 
     <div class="container">
-
         <nav>
             <img src="images/braylon logo fixed again.png" class="logo">
 
@@ -47,7 +39,6 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
-
                 <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
 
@@ -58,284 +49,236 @@
             <p>UI/UX & CS Student</p>
             <h1>Hi, I'm <span>Braylon Watson</span><br>from Arkansas</h1>
         </div>
-
     </div>
 </div>
 
-<!-- ================= ABOUT ================= -->
+<div id="page-content">
 
-<div id="about">
-<div class="section">
-<div class="container">
+    <div id="about">
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/fb pic.jpg">
+                    </div>
 
-<div class="row">
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
 
-<div class="about-col-1">
-<img src="images/fb pic.jpg">
-</div>
+                        <p>
+                            Computer science student and football player at the University of Arkansas with a passion for technology sparked in childhood by my father's influence in the IT field. Inspired by a lifelong exposure to computers and video games, I aspire to excel as a full-stack developer while honing in on other diverse skill sets. Beyond coding, I harbor a deep love for music and fashion, seeking to blend creativity with technical expertise in my pursuits.
+                        </p>
 
-<div class="about-col-2">
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
 
-<h1 class="sub-title">About Me</h1>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                                <li><span>Misc</span><br>Simple coding tasks / 2D games</li>
+                                <li><span>Machine Learning</span><br>A.I Integration</li>
+                            </ul>
+                        </div>
 
-<p>
-Computer science student and football player at the University of Arkansas with a passion for technology sparked in childhood by my father's influence in the IT field. Inspired by a lifelong exposure to computers and video games, I aspire to excel as a full-stack developer while honing in on other diverse skill sets. Beyond coding, I harbor a deep love for music and fashion, seeking to blend creativity with technical expertise in my pursuits.
-</p>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2022 Summer</span><br>IT Intern at Bryant Public Schools</li>
+                                <li><span>2022 - Current</span><br>Arkansas Razorback Football Player</li>
+                            </ul>
+                        </div>
 
-<div class="tab-titles">
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>University (2022-Current)</span><br>Software Engineering level (Junior)</li>
+                                <li><span>Highschool</span><br>2022 graduate of Malvern Highschool</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
 
-<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-<p class="tab-links" onclick="opentab('experience')">Experience</p>
-<p class="tab-links" onclick="opentab('education')">Education</p>
+    <div id="services">
+        <div class="section">
+            <div class="container">
+                <h1 class="sub-title">My Services</h1>
 
-</div>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-regular fa-images"></i>
+                        <h2>UI/UX</h2>
+                        <p>I can create websites, responsive designs, web banners and ads, and landing pages.</p>
+                        <a href="#">Learn more</a>
+                    </div>
 
-<div class="tab-contents active-tab" id="skills">
-<ul>
-<li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
-<li><span>Misc</span><br>Simple coding tasks / 2D games</li>
-<li><span>Machine Learning</span><br>A.I Integration</li>
-</ul>
-</div>
+                    <div>
+                        <i class="fa-regular fa-keyboard"></i>
+                        <h2>C++</h2>
+                        <p>Proficient in C++ being able to deliver basic games like tic tac toe, dice games, etc.</p>
+                        <a href="#">Learn more</a>
+                    </div>
 
-<div class="tab-contents" id="experience">
-<ul>
-<li><span>2022 Summer</span><br>IT Intern at Bryant Public Schools</li>
-<li><span>2022 - Current</span><br>Arkansas Razorback Football Player</li>
-</ul>
-</div>
+                    <div>
+                        <i class="fa-regular fa-user"></i>
+                        <h2>Web Portfolios</h2>
+                        <p>I can also create web portfolios like this one for you.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<div class="tab-contents" id="education">
-<ul>
-<li><span>University (2022-Current)</span><br>Software Engineering level (Junior)</li>
-<li><span>Highschool</span><br>2022 graduate of Malvern Highschool</li>
-</ul>
-</div>
+    <div id="portfolio">
+        <div class="section">
+            <div class="container">
+                <h1 class="sub-title">My Work</h1>
 
-</div>
-</div>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/web design new.webp">
 
-</div>
-</div>
-</div>
+                        <div class="layer">
+                            <h3>Resume Analyzer</h3>
+                            <p>Click the link to view my A.I integrated resume analyzer.</p>
+                            <a href="https://resume-analyzer--braylonwatson.replit.app/" target="_blank">
+                                <i class="fa-solid fa-link"></i>
+                            </a>
+                        </div>
+                    </div>
 
-<!-- ================= SERVICES ================= -->
+                    <div class="work">
+                        <img src="images/footballtech.jpg">
 
-<div id="services">
-<div class="section">
-<div class="container">
+                        <div class="layer">
+                            <h3>CoordinAIte</h3>
+                            <p>Click the link to view my defensive play prediction app.</p>
+                            <a href="https://football-ai-silk.vercel.app/" target="_blank">
+                                <i class="fa-solid fa-link"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-<h1 class="sub-title">My Services</h1>
+                <a href="https://github.com/braylonwatson" class="btn">See More</a>
+            </div>
+        </div>
+    </div>
 
-<div class="services-list">
+    <div id="contact">
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
 
-<div>
-<i class="fa-regular fa-images"></i>
-<h2>UI/UX</h2>
-<p>I can create websites, responsive designs, web banners and ads, and landing pages.</p>
-<a href="#">Learn more</a>
-</div>
+                        <p><i class="fa-regular fa-paper-plane"></i>braylon5watson@gmail.com</p>
+                        <p><i class="fa-solid fa-square-phone"></i>501-467-6056</p>
 
-<div>
-<i class="fa-regular fa-keyboard"></i>
-<h2>C++</h2>
-<p>Proficient in C++ being able to deliver basic games like tic tac toe, dice games, etc.</p>
-<a href="#">Learn more</a>
-</div>
+                        <div class="social-icons">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        </div>
 
-<div>
-<i class="fa-regular fa-user"></i>
-<h2>Web Portfolios</h2>
-<p>I can also create web portfolios like this one for you.</p>
-<a href="#">Learn more</a>
-</div>
+                        <a href="images/Resume.pdf" download class="btn btn2">Download Resume</a>
+                    </div>
 
-</div>
-</div>
-</div>
-</div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
 
-<!-- ================= PORTFOLIO ================= -->
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
 
-<div id="portfolio">
-<div class="section">
-<div class="container">
-
-<h1 class="sub-title">My Work</h1>
-
-<div class="work-list">
-
-<div class="work">
-<img src="images/web design new.webp">
-<div class="layer">
-<h3>Resume Analyzer</h3>
-<p>Click the link to view my A.I integrated resume analyzer.</p>
-<a href="https://resume-analyzer--braylonwatson.replit.app/" target="_blank">
-<i class="fa-solid fa-link"></i>
-</a>
-</div>
-</div>
-
-<div class="work">
-<img src="images/footballtech.jpg">
-<div class="layer">
-<h3>CoordinAIte</h3>
-<p>Click the link to view my defensive play prediction app.</p>
-<a href="https://football-ai-silk.vercel.app/" target="_blank">
-<i class="fa-solid fa-link"></i>
-</a>
-</div>
-</div>
-
-</div>
-
-<a href="https://github.com/braylonwatson" class="btn">See More</a>
-
-</div>
-</div>
-</div>
-
-<!-- ================= CONTACT ================= -->
-
-<div id="contact">
-<div class="section">
-<div class="container">
-
-<div class="row">
-
-<div class="contact-left">
-
-<h1 class="sub-title">Contact Me</h1>
-
-<p><i class="fa-regular fa-paper-plane"></i> braylon5watson@gmail.com</p>
-<p><i class="fa-solid fa-square-phone"></i> 501-467-6056</p>
-
-<div class="social-icons">
-<a href="#"><i class="fa-brands fa-instagram"></i></a>
-<a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-</div>
-
-<a href="images/Resume.pdf" download class="btn btn2">Download Resume</a>
-
-</div>
-
-<div class="contact-right">
-
-<form name="submit-to-google-sheet">
-
-<input type="text" name="Name" placeholder="Your Name" required>
-<input type="email" name="Email" placeholder="Your Email" required>
-<textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-
-<button type="submit" class="btn btn2">Submit</button>
-
-</form>
-
-<span id="msg"></span>
+            <div class="copyright">
+                <p>Copyright © Braylon</p>
+            </div>
+        </div>
+    </div>
 
 </div>
-
-</div>
-</div>
-
-<div class="copyright">
-<p>Copyright © Braylon</p>
-</div>
-
-</div>
-</div>
-
-<!-- ================= JAVASCRIPT ================= -->
 
 <script>
-var tablinks = document.getElementsByClassName("tab-links");
-var tabcontents = document.getElementsByClassName("tab-contents");
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
 
-function opentab(tabname){
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
 
-for(tablink of tablinks){
-tablink.classList.remove("active-link");
-}
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
 
-for(tabcontent of tabcontents){
-tabcontent.classList.remove("active-tab");
-}
-
-event.currentTarget.classList.add("active-link");
-document.getElementById(tabname).classList.add("active-tab");
-}
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
 </script>
 
 <script>
-var sidemenu = document.getElementById("sidemenu");
+    var sidemenu = document.getElementById("sidemenu");
 
-function openmenu(){
-sidemenu.style.right = "0";
-}
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
 
-function closemenu(){
-sidemenu.style.right = "-200px";
-}
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
 </script>
 
-<!-- VIDEO LOOP SCRIPT -->
-
 <script>
-const videos = document.querySelectorAll(".bg-video");
-let current = 0;
+    const videos = document.querySelectorAll(".bg-video");
+    let current = 0;
 
-videos[current].play();
+    videos[current].play();
 
-videos.forEach(video => {
+    videos.forEach(video => {
+        video.addEventListener("ended", () => {
+            videos[current].classList.remove("active");
+            videos[current].pause();
+            videos[current].currentTime = 0;
 
-video.addEventListener("ended", () => {
+            current = (current + 1) % videos.length;
 
-videos[current].classList.remove("active");
-videos[current].pause();
-videos[current].currentTime = 0;
-
-current = (current + 1) % videos.length;
-
-videos[current].classList.add("active");
-videos[current].play();
-
-});
-
-});
+            videos[current].classList.add("active");
+            videos[current].play();
+        });
+    });
 </script>
 
-<!-- CONTACT FORM -->
-
 <script>
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwihQ9KY3FkdaDF-UbpGwTdQOMj9rIhIma3u1zWBykJPLXt5fpwE0LFCpBUtZ7P_QQT/exec'
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwihQ9KY3FkdaDF-UbpGwTdQOMj9rIhIma3u1zWBykJPLXt5fpwE0LFCpBUtZ7P_QQT/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+        e.preventDefault()
 
-const form = document.forms['submit-to-google-sheet']
-const msg = document.getElementById("msg")
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully!"
 
-form.addEventListener('submit', e => {
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
 
-e.preventDefault()
+                form.reset()
+            })
 
-fetch(scriptURL, {
-method: 'POST',
-body: new FormData(form)
-})
-
-.then(response => {
-
-msg.innerHTML = "Message sent successfully!"
-
-setTimeout(function(){
-msg.innerHTML = ""
-},5000)
-
-form.reset()
-
-})
-
-.catch(error => console.error('Error!', error.message))
-
-})
+            .catch(error => console.error('Error!', error.message))
+    })
 </script>
 
 </body>
