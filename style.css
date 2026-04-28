@@ -461,7 +461,10 @@ nav .fa-solid{
 @media only screen and (max-width:600px){
     #header{
         height:100vh;
-        position:relative;
+        position:sticky;
+        top:0;
+        overflow:hidden;
+        z-index:1;
     }
 
     .bg-video{
