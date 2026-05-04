@@ -57,7 +57,7 @@ body{
 }
 
 .life2{
-    object-position:center 35%;
+    object-position:center 18%;
 }
 
 .bg-video.active{
@@ -472,7 +472,7 @@ nav .fa-solid{
     }
 
     .bg-video{
-        object-position:center 8;
+        object-position:center 18;
     }
 
     .header-text{
